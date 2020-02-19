@@ -1,0 +1,42 @@
+---
+title: "STAT 184 Homework Exercises" 
+subtitle: "DataComputing Chapters 1 & 2"
+author: "Your Name"
+output: html_notebook
+---
+
+## Assigned Exercises
+
+- DC Chapter 1 Exercises: 1.1, 1.2, 1.3, 1.4, 1.5  
+- DC Chapter 2 Exercises: 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.8, 2.9
+
+## Front Matter
+
+```{r}
+# clean up workspace environment
+rm(list = ls())
+
+# all packages used for the assignment
+library(mosaic)
+library(tidyverse)
+
+```
+
+
+
+## Chapter 1 Exercises
+
+### Problem 1.1
+
+
+### Problem 1.2
+
+[and so forth...]
+
+
+## Chapter 2 Exercises
+
+### Problem 2.1
+
+[and so forth...]
+
