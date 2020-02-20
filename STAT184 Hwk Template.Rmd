@@ -18,6 +18,8 @@ rm(list = ls())
 # all packages used for the assignment
 library(mosaic)
 library(tidyverse)
+library(DataComputing)
+library(ggplot2)
 
 ```
 
@@ -26,15 +28,71 @@ library(tidyverse)
 ## Chapter 10 Exercises
 
 ### Problem 10.1
-1.) Summary Function
+1.) Summary 
 2.) Data verb
-3.) reduction fucntion
-4.)
-5.)
-6.) Summary Function
+3.) reduction 
+4.) reduction 
+5.) summary 
+6.) Summary 
 7.) Data verb
-8.) Summary Function
+8.) Summary 
 
-### Problem 1.2
+### Problem 10.2
+1.) mutate() fucntion
+2.) Arrange() function
+3.) filter() function
+4.) select() function
+5.) select() fucntion 
+### Problem 10.5
+1.) First we will use the 'filter()' function to show cases with first and second, then we can use the 'n()' function to count the cases who picked the same candidate for first and second
+```{r}
+Minneapolis2013 %>%
+  filter(First==Second)%>%
+  summarise(n())
 
 
+
+```
+2.) For this problem, we use filter() function to make sure first and second are the same.after that we can use group_by() with first and second to find how many of each pair. The summarise(total = n()) will find the number of each pair. arrange() will order by decreasing order. head(4) will include the undervote.
+```{r}
+Minneapolis2013 %>%
+  group_by(First,Second)%>%
+  filter(First==Second)%>%
+  summarise(total=n())%>%
+  arrange(desc(total))%>%
+  head(4)
+```
+
+3.) For this problem we firdt use group_by() to group the first and second. The filter() fucntion with the argument will filter pairs with ole savior. We can then use the summarise() fucntion with its argument to find the number of distinct pair. The arrange() fucntion  with its argument to arrange the results in decreasing total. the Head(4) will display the top 3 second and first choices of ole savior.
+```{r}
+Minneapolis2013 %>%
+  group_by(First, Second) %>%
+  filter(First=="OLE SAVIOR") %>%
+  summarise(total=n()) %>%
+  arrange(desc(total)) %>%
+  head(4)
+  
+```
+
+
+### problem 10.6
+1.)
+```{r}
+diamonds %>% group_by(color) %>% summarise(avg = mean(carat)) %>% arrange(desc(avg)) %>% head(1)
+
+
+```
+verb1= group_by  args1= color
+    verb2= summarise args2= avg= mean(carat)
+    args3= avg
+2.)
+
+```{r}
+diamonds %>% group_by(color) %>% summarise(Tables = mean(table/carat)) %>% arrange(desc(Tables)) %>% head(1)
+
+```
+verb1= group_by  args1= color
+    verb2= summarise args2= tables = mean(table/carat)
+    args3= tables
+    
+### Problem
