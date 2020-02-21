@@ -43,6 +43,18 @@ library(ggplot2)
 3.) filter() function
 4.) select() function
 5.) select() fucntion 
+### Problem 10.3
+1.)n()
+2.)names()
+3.)help()
+4.)library(package)
+5.)group_by
+### Problem 10.4
+1.)arrange()
+2.)filter(sex=F)
+3.)filter(sex=M)
+4.)summarise(total=n())
+5.)select(name), summarise(count=n())
 ### Problem 10.5
 1.) First we will use the 'filter()' function to show cases with first and second, then we can use the 'n()' function to count the cases who picked the same candidate for first and second
 ```{r}
@@ -95,4 +107,14 @@ verb1= group_by  args1= color
     verb2= summarise args2= tables = mean(table/carat)
     args3= tables
     
-### Problem
+### Problem 10.7
+Data wrangling command
+```{r}
+Minor <- Minneapolis2013 %>%
+  group_by(First) %>%
+  summarise(total=n())%>%
+  mutate(First = ifelse(total < 5000, "minor", First))
+Minor %>%
+  group_by(First)%>%
+  summarise(sum(total))
+```
