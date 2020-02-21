@@ -108,7 +108,7 @@ verb1= group_by  args1= color
     args3= tables
     
 ### Problem 10.7
-Data wrangling command
+Data wrangling command 
 ```{r}
 Minor <- Minneapolis2013 %>%
   group_by(First) %>%
