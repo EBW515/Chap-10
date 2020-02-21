@@ -239,13 +239,96 @@ summary {
 <h2>Front Matter</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB3b3Jrc3BhY2UgZW52aXJvbm1lbnRcbnJtKGxpc3QgPSBscygpKVxuIyBhbGwgcGFja2FnZXMgdXNlZCBmb3IgdGhlIGFzc2lnbm1lbnRcbmxpYnJhcnkobW9zYWljKVxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KERhdGFDb21wdXRpbmcpXG5saWJyYXJ5KGdncGxvdDIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB3b3Jrc3BhY2UgZW52aXJvbm1lbnRcbnJtKGxpc3QgPSBscygpKVxuIyBhbGwgcGFja2FnZXMgdXNlZCBmb3IgdGhlIGFzc2lnbm1lbnRcbmxpYnJhcnkobW9zYWljKVxuYGBgIn0= -->
 <pre class="r"><code># clean up workspace environment
 rm(list = ls())
 # all packages used for the assignment
-library(mosaic)
-library(tidyverse)
-library(DataComputing)
+library(mosaic)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBkcGx5clxuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGxhdHRpY2VcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dmb3JtdWxhXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGdncGxvdDJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dzdGFuY2VcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmGdnc3RhbmNl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnZ3Bsb3Qy4oCZOlxuXG4gICAgZ2VvbV9lcnJvcmJhcmgsIEdlb21FcnJvcmJhcmhcblxuXG5OZXcgdG8gZ2dmb3JtdWxhPyAgVHJ5IHRoZSB0dXRvcmlhbHM6IFxuXHRsZWFybnI6OnJ1bl90dXRvcmlhbChcImludHJvZHVjdGlvblwiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcblx0bGVhcm5yOjpydW5fdHV0b3JpYWwoXCJyZWZpbmluZ1wiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogbW9zYWljRGF0YVxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBNYXRyaXhcblRoaXMgdmVyc2lvbiBvZiBTaGlueSBpcyBkZXNpZ25lZCB0byB3b3JrIHdpdGggJ2h0bWx3aWRnZXRzJyA+PSAxLjUuXG4gICAgUGxlYXNlIHVwZ3JhZGUgdmlhIGluc3RhbGwucGFja2FnZXMoJ2h0bWx3aWRnZXRzJykuXG5cblRoZSAnbW9zYWljJyBwYWNrYWdlIG1hc2tzIHNldmVyYWwgZnVuY3Rpb25zIGZyb20gY29yZSBwYWNrYWdlcyBpbiBvcmRlciB0byBhZGQgXG5hZGRpdGlvbmFsIGZlYXR1cmVzLiAgVGhlIG9yaWdpbmFsIGJlaGF2aW9yIG9mIHRoZXNlIGZ1bmN0aW9ucyBzaG91bGQgbm90IGJlIGFmZmVjdGVkIGJ5IHRoaXMuXG5cbk5vdGU6IElmIHlvdSB1c2UgdGhlIE1hdHJpeCBwYWNrYWdlLCBiZSBzdXJlIHRvIGxvYWQgaXQgQkVGT1JFIGxvYWRpbmcgbW9zYWljLlxuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbW9zYWlj4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6TWF0cml44oCZOlxuXG4gICAgbWVhblxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmdncGxvdDLigJk6XG5cbiAgICBzdGF0XG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpkcGx5cuKAmTpcblxuICAgIGNvdW50LCBkbywgdGFsbHlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgYmlub20udGVzdCwgY29yLCBjb3IudGVzdCwgY292LFxuICAgIGZpdmVudW0sIElRUiwgbWVkaWFuLCBwcm9wLnRlc3QsXG4gICAgcXVhbnRpbGUsIHNkLCB0LnRlc3QsIHZhclxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIG1heCwgbWVhbiwgbWluLCBwcm9kLCByYW5nZSxcbiAgICBzYW1wbGUsIHN1bVxuIn0= -->
+<pre><code>Loading required package: dplyr
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: lattice
+Loading required package: ggformula
+Loading required package: ggplot2
+Loading required package: ggstance
+
+Attaching package: ‘ggstance’
+
+The following objects are masked from ‘package:ggplot2’:
+
+    geom_errorbarh, GeomErrorbarh
+
+
+New to ggformula?  Try the tutorials: 
+    learnr::run_tutorial(&quot;introduction&quot;, package = &quot;ggformula&quot;)
+    learnr::run_tutorial(&quot;refining&quot;, package = &quot;ggformula&quot;)
+Loading required package: mosaicData
+Loading required package: Matrix
+This version of Shiny is designed to work with 'htmlwidgets' &gt;= 1.5.
+    Please upgrade via install.packages('htmlwidgets').
+
+The 'mosaic' package masks several functions from core packages in order to add 
+additional features.  The original behavior of these functions should not be affected by this.
+
+Note: If you use the Matrix package, be sure to load it BEFORE loading mosaic.
+
+Attaching package: ‘mosaic’
+
+The following object is masked from ‘package:Matrix’:
+
+    mean
+
+The following object is masked from ‘package:ggplot2’:
+
+    stat
+
+The following objects are masked from ‘package:dplyr’:
+
+    count, do, tally
+
+The following objects are masked from ‘package:stats’:
+
+    binom.test, cor, cor.test, cov,
+    fivenum, IQR, median, prop.test,
+    quantile, sd, t.test, var
+
+The following objects are masked from ‘package:base’:
+
+    max, mean, min, prod, range,
+    sample, sum</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXHUwMDFiWzMwbeKUgOKUgCBcdTAwMWJbMW1BdHRhY2hpbmcgcGFja2FnZXNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgCB0aWR5dmVyc2UgMS4yLjEg4pSA4pSAXHUwMDFiWzM5bVxuXHUwMDFiWzMwbVx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG10aWJibGUgXHUwMDFiWzMwbSAyLjEuMyAgICAgXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXB1cnJyICBcdTAwMWJbMzBtIDAuMy4yXG5cdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXIgIFx1MDAxYlszMG0gMC44LjMgICAgIFx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG1zdHJpbmdyXHUwMDFiWzMwbSAxLjQuMFxuXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXJlYWRyICBcdTAwMWJbMzBtIDEuMy4xICAgICBcdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtZm9yY2F0c1x1MDAxYlszMG0gMC4zLjBcdTAwMWJbMzltXG5cdTAwMWJbMzBt4pSA4pSAIFx1MDAxYlsxbUNvbmZsaWN0c1x1MDAxYlsyMm0g4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZV9jb25mbGljdHMoKSDilIDilIBcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtY291bnQoKVx1MDAxYlszMG0gICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpjb3VudCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtcHVycnJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtY3Jvc3MoKVx1MDAxYlszMG0gICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06OmNyb3NzKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZG8oKVx1MDAxYlszMG0gICAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpkbygpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZXhwYW5kKClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bU1hdHJpeFx1MDAxYlszMG06OmV4cGFuZCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtZHBseXJcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZmlsdGVyKClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzMwbTo6ZmlsdGVyKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1nZ3N0YW5jZVx1MDAxYlszMG06Olx1MDAxYlszMm1nZW9tX2Vycm9yYmFyaCgpXHUwMDFiWzMwbSBtYXNrcyBcdTAwMWJbMzRtZ2dwbG90Mlx1MDAxYlszMG06Omdlb21fZXJyb3JiYXJoKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06Olx1MDAxYlszMm1sYWcoKVx1MDAxYlszMG0gICAgICAgICAgICAgICBtYXNrcyBcdTAwMWJbMzRtc3RhdHNcdTAwMWJbMzBtOjpsYWcoKVxuXHUwMDFiWzMxbeKcllx1MDAxYlszMG0gXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06Olx1MDAxYlszMm1zdGF0KClcdTAwMWJbMzBtICAgICAgICAgICAgIG1hc2tzIFx1MDAxYlszNG1nZ3Bsb3QyXHUwMDFiWzMwbTo6c3RhdCgpXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtbW9zYWljXHUwMDFiWzMwbTo6XHUwMDFiWzMybXRhbGx5KClcdTAwMWJbMzBtICAgICAgICAgICAgbWFza3MgXHUwMDFiWzM0bWRwbHlyXHUwMDFiWzMwbTo6dGFsbHkoKVx1MDAxYlszOW1cbiJ9 -->
+<pre><code>[30m── [1mAttaching packages[22m ──── tidyverse 1.2.1 ──[39m
+[30m[32m✔[30m [34mtibble [30m 2.1.3     [32m✔[30m [34mpurrr  [30m 0.3.2
+[32m✔[30m [34mtidyr  [30m 0.8.3     [32m✔[30m [34mstringr[30m 1.4.0
+[32m✔[30m [34mreadr  [30m 1.3.1     [32m✔[30m [34mforcats[30m 0.3.0[39m
+[30m── [1mConflicts[22m ─────── tidyverse_conflicts() ──
+[31m✖[30m [34mmosaic[30m::[32mcount()[30m            masks [34mdplyr[30m::count()
+[31m✖[30m [34mpurrr[30m::[32mcross()[30m             masks [34mmosaic[30m::cross()
+[31m✖[30m [34mmosaic[30m::[32mdo()[30m               masks [34mdplyr[30m::do()
+[31m✖[30m [34mtidyr[30m::[32mexpand()[30m            masks [34mMatrix[30m::expand()
+[31m✖[30m [34mdplyr[30m::[32mfilter()[30m            masks [34mstats[30m::filter()
+[31m✖[30m [34mggstance[30m::[32mgeom_errorbarh()[30m masks [34mggplot2[30m::geom_errorbarh()
+[31m✖[30m [34mdplyr[30m::[32mlag()[30m               masks [34mstats[30m::lag()
+[31m✖[30m [34mmosaic[30m::[32mstat()[30m             masks [34mggplot2[30m::stat()
+[31m✖[30m [34mmosaic[30m::[32mtally()[30m            masks [34mdplyr[30m::tally()[39m</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShEYXRhQ29tcHV0aW5nKVxubGlicmFyeShnZ3Bsb3QyKVxuYGBgIn0= -->
+<pre class="r"><code>library(DataComputing)
 library(ggplot2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -259,7 +342,7 @@ library(ggplot2)</code></pre>
 </div>
 <div id="problem-10.2" class="section level3">
 <h3>Problem 10.2</h3>
-<p>1.) mutate() fucntion 2.) Arrange() function 3.) filter() function 4.) select() function 5.) select() fucntion ### Problem 10.5 1.) First we will use the ‘filter()’ function to show cases with first and second, then we can use the ‘n()’ function to count the cases who picked the same candidate for first and second</p>
+<p>1.) mutate() fucntion 2.) Arrange() function 3.) filter() function 4.) select() function 5.) select() fucntion ### Problem 10.3 1.)n() 2.)names() 3.)help() 4.)library(package) 5.)group_by ### Problem 10.4 1.)arrange() 2.)filter(sex=F) 3.)filter(sex=M) 4.)summarise(total=n()) 5.)select(name), summarise(count=n()) ### Problem 10.5 1.) First we will use the ‘filter()’ function to show cases with first and second, then we can use the ‘n()’ function to count the cases who picked the same candidate for first and second</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTWlubmVhcG9saXMyMDEzICU+JVxuICBmaWx0ZXIoRmlyc3Q9PVNlY29uZCklPiVcbiAgc3VtbWFyaXNlKG4oKSlcbmBgYCJ9 -->
@@ -342,13 +425,32 @@ library(ggplot2)</code></pre>
 <!-- rnb-text-begin -->
 <p>verb1= group_by args1= color verb2= summarise args2= tables = mean(table/carat) args3= tables</p>
 </div>
-<div id="problem" class="section level3">
-<h3>Problem</h3>
+<div id="problem-10.7" class="section level3">
+<h3>Problem 10.7</h3>
+<p>Data wrangling command</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTWlub3IgPC0gTWlubmVhcG9saXMyMDEzICU+JVxuICBncm91cF9ieShGaXJzdCkgJT4lXG4gIHN1bW1hcmlzZSh0b3RhbD1uKCkpJT4lXG4gIG11dGF0ZShGaXJzdCA9IGlmZWxzZSh0b3RhbCA8IDUwMDAsIFwibWlub3JcIiwgRmlyc3QpKVxuTWlub3IgJT4lXG4gIGdyb3VwX2J5KEZpcnN0KSU+JVxuICBzdW1tYXJpc2Uoc3VtKHRvdGFsKSlcbmBgYCJ9 -->
+<pre class="r"><code>Minor &lt;- Minneapolis2013 %&gt;%
+  group_by(First) %&gt;%
+  summarise(total=n())%&gt;%
+  mutate(First = ifelse(total &lt; 5000, &quot;minor&quot;, First))
+Minor %&gt;%
+  group_by(First)%&gt;%
+  summarise(sum(total))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6NX0sInJkZiI6IlVrUllNZ3BZQ2dBQUFBSUFBd1FCQUFJREFBQUFCQUlBQUFBQkFBUUFDUUFBQUFGNEFBQURFd0FBQUFJQUFBQVFBQUFBQlFBRUFBa0FBQUFNUWtWVVUxa2dTRTlFUjBWVEFBUUFDUUFBQUFwRFFVMGdWMGxPVkU5T0FBUUFDUUFBQUF0RVQwNGdVMEZOVlVWTVV3QUVBQWtBQUFBTFRVRlNTeUJCVGtSU1JWY0FCQUFKQUFBQUJXMXBibTl5QUFBQURRQUFBQVVBQUhFSEFBQWRWd0FBSUk4QUFFeUFBQUE5ZUFBQUJBSUFBQUFCQUFRQUNRQUFBQVZ1WVcxbGN3QUFBQkFBQUFBQ0FBUUFDUUFBQUFWR2FYSnpkQUFFQUFrQUFBQUtjM1Z0S0hSdmRHRnNLUUFBQkFJQUFBQUJBQVFBQ1FBQUFBVmpiR0Z6Y3dBQUFCQUFBQUFCQUFRQUNRQUFBQXBrWVhSaExtWnlZVzFsQUFBRUFnQUFBQUVBQkFBSkFBQUFDWEp2ZHk1dVlXMWxjd0FBQUEwQUFBQUNnQUFBQVAvLy8vc0FBQUQrQUFBRUFnQUFBQUVBQkFBSkFBQUFCMjl3ZEdsdmJuTUFBQUlUQUFBQUJRQUFBQkFBQUFBQkFBUUFDUUFBQUFGeUFBQUFFQUFBQUFFQUJBQUpBQUFBRDNWdWJtRnRaV1F0WTJoMWJtc3RNd0FBQUFvQUFBQUJBQUFBQUFBQUFBMEFBQUFCQUFBQUJRQUFBQTBBQUFBQkFBQUFBZ0FBQkFJQUFBTC9BQUFBRUFBQUFBVUFCQUFKQUFBQUJtVnVaMmx1WlFBRUFBa0FBQUFGYkdGaVpXd0FCQUFKQUFBQURuSnZkMjVoYldWekxuQnlhVzUwQUFRQUNRQUFBQXB5YjNkekxuUnZkR0ZzQUFRQUNRQUFBQXBqYjJ4ekxuUnZkR0ZzQUFBQS9nQUFBUDQ9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["First"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sum(total)"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"BETSY HODGES","2":"28935"},{"1":"CAM WINTON","2":"7511"},{"1":"DON SAMUELS","2":"8335"},{"1":"MARK ANDREW","2":"19584"},{"1":"minor","2":"15736"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAxODQgSG9tZXdvcmsgRXhlcmNpc2VzIiAKc3VidGl0bGU6ICJEYXRhQ29tcHV0aW5nIENoYXB0ZXJzIDEwIgphdXRob3I6ICJFcmljIFdlYWgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIEFzc2lnbmVkIEV4ZXJjaXNlcwoKLSBEQyBDaGFwdGVyIDEwIEV4ZXJjaXNlczogMTAuMS0xMC45CgojIyBGcm9udCBNYXR0ZXIKCmBgYHtyfQojIGNsZWFuIHVwIHdvcmtzcGFjZSBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgYWxsIHBhY2thZ2VzIHVzZWQgZm9yIHRoZSBhc3NpZ25tZW50CmxpYnJhcnkobW9zYWljKQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpsaWJyYXJ5KGdncGxvdDIpCgpgYGAKCgoKIyMgQ2hhcHRlciAxMCBFeGVyY2lzZXMKCiMjIyBQcm9ibGVtIDEwLjEKMS4pIFN1bW1hcnkgCjIuKSBEYXRhIHZlcmIKMy4pIHJlZHVjdGlvbiAKNC4pIHJlZHVjdGlvbiAKNS4pIHN1bW1hcnkgCjYuKSBTdW1tYXJ5IAo3LikgRGF0YSB2ZXJiCjguKSBTdW1tYXJ5IAoKIyMjIFByb2JsZW0gMTAuMgoxLikgbXV0YXRlKCkgZnVjbnRpb24KMi4pIEFycmFuZ2UoKSBmdW5jdGlvbgozLikgZmlsdGVyKCkgZnVuY3Rpb24KNC4pIHNlbGVjdCgpIGZ1bmN0aW9uCjUuKSBzZWxlY3QoKSBmdWNudGlvbiAKIyMjIFByb2JsZW0gMTAuNQoxLikgRmlyc3Qgd2Ugd2lsbCB1c2UgdGhlICdmaWx0ZXIoKScgZnVuY3Rpb24gdG8gc2hvdyBjYXNlcyB3aXRoIGZpcnN0IGFuZCBzZWNvbmQsIHRoZW4gd2UgY2FuIHVzZSB0aGUgJ24oKScgZnVuY3Rpb24gdG8gY291bnQgdGhlIGNhc2VzIHdobyBwaWNrZWQgdGhlIHNhbWUgY2FuZGlkYXRlIGZvciBmaXJzdCBhbmQgc2Vjb25kCmBgYHtyfQpNaW5uZWFwb2xpczIwMTMgJT4lCiAgZmlsdGVyKEZpcnN0PT1TZWNvbmQpJT4lCiAgc3VtbWFyaXNlKG4oKSkKCgoKYGBgCjIuKSBGb3IgdGhpcyBwcm9ibGVtLCB3ZSB1c2UgZmlsdGVyKCkgZnVuY3Rpb24gdG8gbWFrZSBzdXJlIGZpcnN0IGFuZCBzZWNvbmQgYXJlIHRoZSBzYW1lLmFmdGVyIHRoYXQgd2UgY2FuIHVzZSBncm91cF9ieSgpIHdpdGggZmlyc3QgYW5kIHNlY29uZCB0byBmaW5kIGhvdyBtYW55IG9mIGVhY2ggcGFpci4gVGhlIHN1bW1hcmlzZSh0b3RhbCA9IG4oKSkgd2lsbCBmaW5kIHRoZSBudW1iZXIgb2YgZWFjaCBwYWlyLiBhcnJhbmdlKCkgd2lsbCBvcmRlciBieSBkZWNyZWFzaW5nIG9yZGVyLiBoZWFkKDQpIHdpbGwgaW5jbHVkZSB0aGUgdW5kZXJ2b3RlLgpgYGB7cn0KTWlubmVhcG9saXMyMDEzICU+JQogIGdyb3VwX2J5KEZpcnN0LFNlY29uZCklPiUKICBmaWx0ZXIoRmlyc3Q9PVNlY29uZCklPiUKICBzdW1tYXJpc2UodG90YWw9bigpKSU+JQogIGFycmFuZ2UoZGVzYyh0b3RhbCkpJT4lCiAgaGVhZCg0KQpgYGAKCjMuKSBGb3IgdGhpcyBwcm9ibGVtIHdlIGZpcmR0IHVzZSBncm91cF9ieSgpIHRvIGdyb3VwIHRoZSBmaXJzdCBhbmQgc2Vjb25kLiBUaGUgZmlsdGVyKCkgZnVjbnRpb24gd2l0aCB0aGUgYXJndW1lbnQgd2lsbCBmaWx0ZXIgcGFpcnMgd2l0aCBvbGUgc2F2aW9yLiBXZSBjYW4gdGhlbiB1c2UgdGhlIHN1bW1hcmlzZSgpIGZ1Y250aW9uIHdpdGggaXRzIGFyZ3VtZW50IHRvIGZpbmQgdGhlIG51bWJlciBvZiBkaXN0aW5jdCBwYWlyLiBUaGUgYXJyYW5nZSgpIGZ1Y250aW9uICB3aXRoIGl0cyBhcmd1bWVudCB0byBhcnJhbmdlIHRoZSByZXN1bHRzIGluIGRlY3JlYXNpbmcgdG90YWwuIHRoZSBIZWFkKDQpIHdpbGwgZGlzcGxheSB0aGUgdG9wIDMgc2Vjb25kIGFuZCBmaXJzdCBjaG9pY2VzIG9mIG9sZSBzYXZpb3IuCmBgYHtyfQpNaW5uZWFwb2xpczIwMTMgJT4lCiAgZ3JvdXBfYnkoRmlyc3QsIFNlY29uZCkgJT4lCiAgZmlsdGVyKEZpcnN0PT0iT0xFIFNBVklPUiIpICU+JQogIHN1bW1hcmlzZSh0b3RhbD1uKCkpICU+JQogIGFycmFuZ2UoZGVzYyh0b3RhbCkpICU+JQogIGhlYWQoNCkKICAKYGBgCgoKIyMjIHByb2JsZW0gMTAuNgoxLikKYGBge3J9CmRpYW1vbmRzICU+JSBncm91cF9ieShjb2xvcikgJT4lIHN1bW1hcmlzZShhdmcgPSBtZWFuKGNhcmF0KSkgJT4lIGFycmFuZ2UoZGVzYyhhdmcpKSAlPiUgaGVhZCgxKQoKCmBgYAp2ZXJiMT0gZ3JvdXBfYnkgIGFyZ3MxPSBjb2xvcgogICAgdmVyYjI9IHN1bW1hcmlzZSBhcmdzMj0gYXZnPSBtZWFuKGNhcmF0KQogICAgYXJnczM9IGF2ZwoyLikKCmBgYHtyfQpkaWFtb25kcyAlPiUgZ3JvdXBfYnkoY29sb3IpICU+JSBzdW1tYXJpc2UoVGFibGVzID0gbWVhbih0YWJsZS9jYXJhdCkpICU+JSBhcnJhbmdlKGRlc2MoVGFibGVzKSkgJT4lIGhlYWQoMSkKCmBgYAp2ZXJiMT0gZ3JvdXBfYnkgIGFyZ3MxPSBjb2xvcgogICAgdmVyYjI9IHN1bW1hcmlzZSBhcmdzMj0gdGFibGVzID0gbWVhbih0YWJsZS9jYXJhdCkKICAgIGFyZ3MzPSB0YWJsZXMKICAgIAojIyMgUHJvYmxlbQo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAxODQgSG9tZXdvcmsgRXhlcmNpc2VzIiAKc3VidGl0bGU6ICJEYXRhQ29tcHV0aW5nIENoYXB0ZXJzIDEwIgphdXRob3I6ICJFcmljIFdlYWgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIEFzc2lnbmVkIEV4ZXJjaXNlcwoKLSBEQyBDaGFwdGVyIDEwIEV4ZXJjaXNlczogMTAuMS0xMC45CgojIyBGcm9udCBNYXR0ZXIKCmBgYHtyfQojIGNsZWFuIHVwIHdvcmtzcGFjZSBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgYWxsIHBhY2thZ2VzIHVzZWQgZm9yIHRoZSBhc3NpZ25tZW50CmxpYnJhcnkobW9zYWljKQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShEYXRhQ29tcHV0aW5nKQpsaWJyYXJ5KGdncGxvdDIpCgpgYGAKCgoKIyMgQ2hhcHRlciAxMCBFeGVyY2lzZXMKCiMjIyBQcm9ibGVtIDEwLjEKMS4pIFN1bW1hcnkgCjIuKSBEYXRhIHZlcmIKMy4pIHJlZHVjdGlvbiAKNC4pIHJlZHVjdGlvbiAKNS4pIHN1bW1hcnkgCjYuKSBTdW1tYXJ5IAo3LikgRGF0YSB2ZXJiCjguKSBTdW1tYXJ5IAoKIyMjIFByb2JsZW0gMTAuMgoxLikgbXV0YXRlKCkgZnVjbnRpb24KMi4pIEFycmFuZ2UoKSBmdW5jdGlvbgozLikgZmlsdGVyKCkgZnVuY3Rpb24KNC4pIHNlbGVjdCgpIGZ1bmN0aW9uCjUuKSBzZWxlY3QoKSBmdWNudGlvbiAKIyMjIFByb2JsZW0gMTAuMwoxLiluKCkKMi4pbmFtZXMoKQozLiloZWxwKCkKNC4pbGlicmFyeShwYWNrYWdlKQo1Lilncm91cF9ieQojIyMgUHJvYmxlbSAxMC40CjEuKWFycmFuZ2UoKQoyLilmaWx0ZXIoc2V4PUYpCjMuKWZpbHRlcihzZXg9TSkKNC4pc3VtbWFyaXNlKHRvdGFsPW4oKSkKNS4pc2VsZWN0KG5hbWUpLCBzdW1tYXJpc2UoY291bnQ9bigpKQojIyMgUHJvYmxlbSAxMC41CjEuKSBGaXJzdCB3ZSB3aWxsIHVzZSB0aGUgJ2ZpbHRlcigpJyBmdW5jdGlvbiB0byBzaG93IGNhc2VzIHdpdGggZmlyc3QgYW5kIHNlY29uZCwgdGhlbiB3ZSBjYW4gdXNlIHRoZSAnbigpJyBmdW5jdGlvbiB0byBjb3VudCB0aGUgY2FzZXMgd2hvIHBpY2tlZCB0aGUgc2FtZSBjYW5kaWRhdGUgZm9yIGZpcnN0IGFuZCBzZWNvbmQKYGBge3J9Ck1pbm5lYXBvbGlzMjAxMyAlPiUKICBmaWx0ZXIoRmlyc3Q9PVNlY29uZCklPiUKICBzdW1tYXJpc2UobigpKQoKCgpgYGAKMi4pIEZvciB0aGlzIHByb2JsZW0sIHdlIHVzZSBmaWx0ZXIoKSBmdW5jdGlvbiB0byBtYWtlIHN1cmUgZmlyc3QgYW5kIHNlY29uZCBhcmUgdGhlIHNhbWUuYWZ0ZXIgdGhhdCB3ZSBjYW4gdXNlIGdyb3VwX2J5KCkgd2l0aCBmaXJzdCBhbmQgc2Vjb25kIHRvIGZpbmQgaG93IG1hbnkgb2YgZWFjaCBwYWlyLiBUaGUgc3VtbWFyaXNlKHRvdGFsID0gbigpKSB3aWxsIGZpbmQgdGhlIG51bWJlciBvZiBlYWNoIHBhaXIuIGFycmFuZ2UoKSB3aWxsIG9yZGVyIGJ5IGRlY3JlYXNpbmcgb3JkZXIuIGhlYWQoNCkgd2lsbCBpbmNsdWRlIHRoZSB1bmRlcnZvdGUuCmBgYHtyfQpNaW5uZWFwb2xpczIwMTMgJT4lCiAgZ3JvdXBfYnkoRmlyc3QsU2Vjb25kKSU+JQogIGZpbHRlcihGaXJzdD09U2Vjb25kKSU+JQogIHN1bW1hcmlzZSh0b3RhbD1uKCkpJT4lCiAgYXJyYW5nZShkZXNjKHRvdGFsKSklPiUKICBoZWFkKDQpCmBgYAoKMy4pIEZvciB0aGlzIHByb2JsZW0gd2UgZmlyZHQgdXNlIGdyb3VwX2J5KCkgdG8gZ3JvdXAgdGhlIGZpcnN0IGFuZCBzZWNvbmQuIFRoZSBmaWx0ZXIoKSBmdWNudGlvbiB3aXRoIHRoZSBhcmd1bWVudCB3aWxsIGZpbHRlciBwYWlycyB3aXRoIG9sZSBzYXZpb3IuIFdlIGNhbiB0aGVuIHVzZSB0aGUgc3VtbWFyaXNlKCkgZnVjbnRpb24gd2l0aCBpdHMgYXJndW1lbnQgdG8gZmluZCB0aGUgbnVtYmVyIG9mIGRpc3RpbmN0IHBhaXIuIFRoZSBhcnJhbmdlKCkgZnVjbnRpb24gIHdpdGggaXRzIGFyZ3VtZW50IHRvIGFycmFuZ2UgdGhlIHJlc3VsdHMgaW4gZGVjcmVhc2luZyB0b3RhbC4gdGhlIEhlYWQoNCkgd2lsbCBkaXNwbGF5IHRoZSB0b3AgMyBzZWNvbmQgYW5kIGZpcnN0IGNob2ljZXMgb2Ygb2xlIHNhdmlvci4KYGBge3J9Ck1pbm5lYXBvbGlzMjAxMyAlPiUKICBncm91cF9ieShGaXJzdCwgU2Vjb25kKSAlPiUKICBmaWx0ZXIoRmlyc3Q9PSJPTEUgU0FWSU9SIikgJT4lCiAgc3VtbWFyaXNlKHRvdGFsPW4oKSkgJT4lCiAgYXJyYW5nZShkZXNjKHRvdGFsKSkgJT4lCiAgaGVhZCg0KQogIApgYGAKCgojIyMgcHJvYmxlbSAxMC42CjEuKQpgYGB7cn0KZGlhbW9uZHMgJT4lIGdyb3VwX2J5KGNvbG9yKSAlPiUgc3VtbWFyaXNlKGF2ZyA9IG1lYW4oY2FyYXQpKSAlPiUgYXJyYW5nZShkZXNjKGF2ZykpICU+JSBoZWFkKDEpCgoKYGBgCnZlcmIxPSBncm91cF9ieSAgYXJnczE9IGNvbG9yCiAgICB2ZXJiMj0gc3VtbWFyaXNlIGFyZ3MyPSBhdmc9IG1lYW4oY2FyYXQpCiAgICBhcmdzMz0gYXZnCjIuKQoKYGBge3J9CmRpYW1vbmRzICU+JSBncm91cF9ieShjb2xvcikgJT4lIHN1bW1hcmlzZShUYWJsZXMgPSBtZWFuKHRhYmxlL2NhcmF0KSkgJT4lIGFycmFuZ2UoZGVzYyhUYWJsZXMpKSAlPiUgaGVhZCgxKQoKYGBgCnZlcmIxPSBncm91cF9ieSAgYXJnczE9IGNvbG9yCiAgICB2ZXJiMj0gc3VtbWFyaXNlIGFyZ3MyPSB0YWJsZXMgPSBtZWFuKHRhYmxlL2NhcmF0KQogICAgYXJnczM9IHRhYmxlcwogICAgCiMjIyBQcm9ibGVtIDEwLjcKRGF0YSB3cmFuZ2xpbmcgY29tbWFuZApgYGB7cn0KTWlub3IgPC0gTWlubmVhcG9saXMyMDEzICU+JQogIGdyb3VwX2J5KEZpcnN0KSAlPiUKICBzdW1tYXJpc2UodG90YWw9bigpKSU+JQogIG11dGF0ZShGaXJzdCA9IGlmZWxzZSh0b3RhbCA8IDUwMDAsICJtaW5vciIsIEZpcnN0KSkKTWlub3IgJT4lCiAgZ3JvdXBfYnkoRmlyc3QpJT4lCiAgc3VtbWFyaXNlKHN1bSh0b3RhbCkpCmBgYAo=</div>
 
 
 
